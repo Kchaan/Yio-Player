@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="no-cache" />
+    <meta http-equiv='cache-control' content='no-cache' />
+    <meta http-equiv='expires' content='0' />
+    <meta http-equiv='pragma' content='no-cache' />
+    <meta name="version" content="1.2.2" />
+    <link rel="stylesheet" href="assets/css/audio.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <title>YioPlayer Audio 1.2.2</title>
+</head>
+
+<body>
+<!------------------------Yio Player START-------------------------->
+    <div class="audio-player" oncontextmenu="return false">
+        <audio id="myAudio" preload="metadata">
+            Your browser doesn't support the HTML5 Audio.
+        </audio>
+        <div class="audio-panel">
+
+            <div class="audio-playing">
+                <img class="audio-playing1" src="assets/images/playing_white.png" />
+                <img class="audio-playing2" src="assets/images/music.png" />
+            </div>
+
+        </div>
+        <div class="audio-body">
+            <div class="audio-cover">
+                <img src="" />
+            </div>
+        <div class="audio-caption">
+
+        </div>
+
+        <div class="audio-control">
+
+            <img src="assets/images/play_dark.png" class="audio-btn-play" draggable="false" />
+            <span class="audio-current">00:00</span>
+
+            <div class="audio-progressClick">
+                <div class="audio-progress">
+                    <div class="audio-showBar"></div>
+                    <div class="audio-timeBar"><div class="audio-timeMax"></div></div>
+                    <div id="audio-showed_time">00:00</div>
+                </div>
+            </div>
+
+            <span class="audio-duration">00:00</span>
+            <img src="assets/images/volume2_dark.png" class="audio-btn-sound audio-btn" draggable="false" />
+            <div class="audio-volume_div">
+                <div class="audio-volume">
+                    <div class="audio-volumeBg"></div>
+                    <div class="audio-volumeBar_bg">
+                        <div class="audio-volumeBar"><div class="audio-volumeMax"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="audio-loop-div audio-btn">
+                <img src="assets/images/replay_all.png" />
+            </div>
+        </div>
+
+            <span class="audio-btn_title" id="audio-btn_title_sound">Volume</span>
+        </div>
+        <div class="audio-playlist">
+
+        </div>
+    </div>
+
+<!------------------------Yio Player END-------------------------->
+
+<p align="center" id="audio-credits"><a href="credits.html" target="_blank">Click here to see credits (music)</a></p>
+
+
+    <script type="application/javascript" src="assets/js/jquery-2.2.4.min.js"></script>
+    <script type="application/javascript" src="assets/js/audio.js"></script>
+    <script>
+        var audioPlayer = {
+            'width': '450px',                                   // 360px is minimum
+            'assets_url': 'assets/',                            // custom base folder for images or other assets
+            'cover_url': 'assets/images/cover.png',             // source of the cover image
+            'cover_height': '260px',                            // height of the cover image
+            'color': 'default',                                 // color scheme of the audio player
+        };
+        var playlist = {
+            1:{
+                'title': 'Morning Sun - Nicolai Heidlas Music',
+                'source': 'assets/audio/audio2.mp3'
+            },
+            2:{
+                'title': 'Ukulele - Bensound',
+                'source': 'assets/audio/audio3.mp3'
+            },
+            3:{
+                'title': 'Let the Show Begin - HookSounds',
+                'source': 'assets/audio/audio4.mp3'
+            },
+            4:{
+                'title': 'REAL RIDE - Nicolai Heidlas',
+                'source': 'assets/audio/audio5.mp3'
+            },
+            5:{
+                'title': 'Good For You - THBD',
+                'source': 'assets/audio/audio6.mp3'
+            },
+            6:{
+                'title': 'CARTOON - Nicolai Heidlas',
+                'source': 'assets/audio/audio7.mp3'
+            },
+            7:{
+                'title': 'BACK IN SUMMER - Nicolai Heidlas',
+                'source': 'assets/audio/audio8.mp3'
+            },
+            8:{
+                'title': 'A WAY FOR ME - Nicolai Heidlas Music',
+                'source': 'assets/audio/audio1.mp3'
+            },
+        }
+    </script>
+</body>
+</html>

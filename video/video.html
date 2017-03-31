@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="no-cache" />
+    <meta http-equiv='cache-control' content='no-cache' />
+    <meta http-equiv='expires' content='0' />
+    <meta http-equiv='pragma' content='no-cache' />
+    <meta name="version" content="1.2.2" />
+    <link rel="stylesheet" href="assets/css/video.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <title>YioPlayer Video 1.2.2</title>
+</head>
+
+<body>
+
+
+<!------------------------Yio Player START-------------------------->
+
+
+    <div class="player" oncontextmenu="return false">
+    <div class="videoContainer" draggable="false">
+        <div id="videoShadow"></div>
+        <!------------------------Sources section-------------------------->
+        <video id="myVideo" controls preload="metadata" poster width="100%" height="100%">
+            <i>Your browser doesn't support the HTML5 Video.</i>
+        </video>
+        <!------------------------Watermark-------------------------->
+            <img id="watermark" src="" />
+        <div class="caption-bg"></div>
+        <div class="control-bg"></div>
+        <div id="shadow"></div>
+        <div class="caption">
+            <!------------------------Title-------------------------->
+            <span class="caption_title"></span>
+            <!------------------------Settings panel-------------------------->
+            <div class="caption_right">
+                <div class="settings_div">
+                    <img src="assets/images/settings.png" class="btn-settings" draggable="false" />
+                    <div class="settings">
+                        <div class="speed_div_header settings-title">Speed <img src="assets/images/slide_down.png" draggable="false" /></div>
+                        <div class="speed_div settings-element">
+                            <div class="speedBtn">0.25x</div>
+                            <div class="speedBtn">0.5x</div>
+                            <div class="speedBtn active">1x</div>
+                            <div class="speedBtn">1.5x</div>
+                            <div class="speedBtn">2x</div>
+                            <div class="reset"></div>
+                        </div>
+                        <div class="reset"></div>
+                        <div class="subtitles_div_header settings-title">Subtitles <img src="assets/images/slide_down.png" draggable="false" /></div>
+                        <div class="subtitle_div settings-element">
+                            <div class="subtitle item active" data-value="off" >off</div>
+                        </div>
+                        <div class="reset"></div>
+                        <div class="quality_div_header settings-title">Quality <img src="assets/images/slide_down.png" draggable="false" /></div>
+                        <div class="quality_div settings-element">
+
+                        </div>
+                        <div class="reset"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------Controls-------------------------->
+        <div class="control">
+
+            <img src="assets/images/play.png" class="btn-play" draggable="false" />
+            <span class="current">00:00</span>
+
+            <div class="progressClick">
+                <div class="progress">
+                    <span class="bufferBar"></span>
+                    <div class="showBar"></div>
+                    <div class="timeBar"><div class="timeMax"></div></div>
+                    <div id="showed_time">00:00</div>
+                </div>
+            </div>
+
+            <span class="duration">00:00</span>
+            <img src="assets/images/fullscreen.png" class="btn-fs btn" draggable="false" />
+
+            <div class="size_div">
+                <img src="assets/images/resize.png" class="btn-size btn" draggable="false" />
+
+                <div class="size">
+                    <div class="sizeBg"></div>
+                    <div class="sizeBar_bg">
+                        <div class="sizeBar"><div class="sizeMax"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="volume_div">
+                <div class="volume">
+                    <div class="volumeBg"></div>
+                    <div class="volumeBar_bg">
+                        <div class="volumeBar"><div class="volumeMax"></div></div>
+                    </div>
+                </div>
+                <img src="assets/images/volume2.png" class="btn-sound btn" draggable="false" />
+            </div>
+
+            <span class="btn_title" id="btn_title_sound">Volume</span>
+            <span class="btn_title" id="btn_title_size">Screen size</span>
+            <span class="btn_title" id="btn_title_fullscreen">Full screen</span>
+        </div>
+        <!------------------------Center icons-------------------------->
+        <img class="loading" src="assets/images/loading.png" />
+        <img class="play_big_div" src="assets/images/bigplay.png" draggable="false" />
+        <img class="replay_big_div" src="assets/images/replay.png" draggable="false" />
+        <!------------------------Context menu-------------------------->
+        <div class="context_menu">
+            <ul>
+                <li class="context_play">Pause</li>
+                <li class="context_stop">Stop</li>
+                <li class="context_repeat">Turn ON auto replay</li>
+                <li class="context_copy">Copy video url</li>
+                <li class="context_html">HTML5 video documentation</li>
+                <li class="context_yioplayer">YioPlayer powered by HTML5</li>
+            </ul>
+        </div>
+        <!------------------------VIDEO ADVERT API [START]-------------------------->
+
+        <div id="advert_div">
+            <video id="advert" preload="metadata" width="100%" height="100%">
+                <source src="" class="advert-source" />
+            </video>
+            <div class="advert_title">Advert ends at <span></span> seconds</div>
+            <img class="ad_play_btn" src="assets/images/bigplay.png" draggable="false" />
+        </div>
+
+        <div id="for_init"></div>
+        <!------------------------VIDEO ADVERT API [END]-------------------------->
+        <!------------------------IMAGE ADVERT API [START]-------------------------->
+
+        <div id="advert_banner">
+            <a target="_blank">
+            <img src="" id="advert_image" />
+            </a>
+            <img class="close-ad" src="assets/images/close.png" />
+        </div>
+
+        <!------------------------IMAGE ADVERT API [END]-------------------------->
+    </div>
+    </div>
+    <input class="copyUrlInput hidden-input" type="text" title="" />
+
+
+<!------------------------Yio Player END-------------------------->
+
+
+    <script type="application/javascript" src="assets/js/jquery-2.2.4.min.js"></script>
+    <script type="application/javascript" src="assets/js/video.js"></script>
+    <!------------------------Parameters by user-------------------------->
+    <script>
+
+        // main player configuration
+
+        var player = {
+            width: '640px',                                 // player width - if player is for iframe, type 100%
+            height: '360px',                                // player height - if player is for iframe, type 100%
+            assets_url: 'assets/',                          // custom base folder for images or other assets
+            title: 'This is title of this demo preview',    // video title - text in caption of player
+            poster: 'assets/images/poster.png',             // poster - image seen before playing video
+            watermark: 'assets/images/logo.png',            // watermark - source image
+            color: 'default',                                   // color - theme color of player
+//            advert: 'assets/videos/aa.mp4',                 // video advert - source of advert video
+//            advert_time: 5,                                 // video advert - time of advert to skip -  if not, type null or none or comment this line
+//            advert_image: 'assets/images/poster.png',       // image/link advert - source of the image
+//            advert_url: 'http://yioplayer.com',             // image/link advert - url to website
+        };
+
+        // url sources of videos to play
+
+        var video_urls = {
+            1: 'assets/videos/4532518-720.mp4',
+            2: 'assets/videos/4532518-480.mp4',
+            3: 'assets/videos/4532518-360.mp4',
+        };
+
+        // subtitles for video
+
+        var video_subtitles = {
+            1: {
+                src: 'assets/subtitles/en_subtitles.vtt',   // subtitle source
+                label: 'English',                           // label - title seen by user in settings
+                lang: 'en',                                 // language of subtitle
+            },
+            2: {
+                src: 'assets/subtitles/de_subtitles.vtt',
+                label: 'Deutsch',
+                lang: 'de',
+            },
+            3: {
+                src: 'assets/subtitles/sk_subtitles.vtt',
+                label: 'Slovensky',
+                lang: 'sk',
+            },
+        };
+
+    </script>
+</body>
+</html>

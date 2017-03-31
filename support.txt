@@ -1,0 +1,7 @@
+Player supported browsers:
+IE: 9+
+Chrome: current
+Firefox: current
+Opera: current
+iOS: 6+
+Android: 4.0+
